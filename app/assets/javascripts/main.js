@@ -16,4 +16,15 @@ $(document).ready(function(){
 		$('body').append("<img id='image' src='"+x+"'></img>")
 	}
 
+
+
+    
+
+
+
+
+
+
+    
+
 });
