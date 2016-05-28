@@ -10,5 +10,33 @@
 
 <%= yield %>
 
+		<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 40%;
+        width: 40%;
+      }
+    </style>
+<div id="map"></div>
+
+<br><br>
+
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 43.761539, lng: -79.411079},
+          zoom: 14
+        });
+      }
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS975JByAfN5bLK1Gvfs8C2J9U1L-02DU&callback=initMap"
+    async defer></script>
+
 </body>
 </html>
