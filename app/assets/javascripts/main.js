@@ -5,9 +5,15 @@ $(document).ready(function(){
         		var parsed = data
         		console.log(parsed);
         		var image = parsed.data[0].images.standard_resolution.url;
+                var image1 = parsed.data[1].images.standard_resolution.url;
+                var image2 = parsed.data[2].images.standard_resolution.url;
+                var image3 = parsed.data[3].images.standard_resolution.url;
             console.log(image);
 
             make(image);
+            make(image1);
+            make(image2);
+            make(image3);
         }
     );
 
@@ -15,16 +21,5 @@ $(document).ready(function(){
 		console.log('hiihashdfasdf');
 		$('body').append("<img id='image' src='"+x+"'></img>")
 	}
-
-
-
-    
-
-
-
-
-
-
-    
 
 });
