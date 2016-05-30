@@ -3,26 +3,45 @@ $(document).ready(function(){
 
     function searchBy(keyword) {
 
-        var lat= 35.4634200;
-        var lng= -97.5151200;
+        var lat= 40.6234400;
+        var lng= -74.1575500;
+        var imagetagged = false;
+
             // This uri allows us to search by media, within a specified location.
+
         var uri = 'https://api.instagram.com/v1/media/search?lat='+lat+'&lng='+lng+'&access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?'
 
         $.getJSON(uri, function(data) {
                     var parsed = data
                     console.log(parsed);
                     x = parsed.data.length
+
             // This allows us to loop through and display the max number of pics for a tag. With IG, max = 20.
+            
             for(i=0; i<x; i++){
 
-                max = parsed.data[i].tags.length
+                // imagetagged = false;
+                max = parsed.data[i].tags.length;
                     for(j=0; j<max; j++){
                         if(parsed.data[i].tags[j] == keyword){
-                var image = parsed.data[i].images.standard_resolution.url;
+                            alert(parsed.data[i].tags[j]);
+                var image = parsed.data[i].images.thumbnail.url;
                             make(image);
+                    imagetagged = true;     
                         } else {
 
                         }
+                }
+                
+                
+                //In first for scope
+                if(imagetagged == false){
+                
+                var image = parsed.data[i].images.thumbnail.url;
+                            make(image);
+                var location = parsed.data[i].location.name;
+                    // alert(location);
+                
                 }
             }
                 console.log(image);
@@ -40,7 +59,45 @@ $(document).ready(function(){
      });
 
 
+
+
+
+
+
+
+
+function findBy(tag) {
+ 
+
+          var res=encodeURIComponent(tag);
+           var uri = 'https://api.instagram.com/v1/tags/'+res+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=10'
+           
+        $.getJSON(uri, function(data) {
+                    var parsed = data
+                    console.log(parsed);
+                    a = parsed.data.length;
+
+                    for(k=0; k<a; k++){
+                    var image = parsed.data[k].images.standard_resolution.url;
+                        console.log(image);
+
+                        make(image);
+                    }
+            }
+        );
+
+        var make = function(a){
+            $('body').append("<img id='image' src='"+a+"'></img>")
+        }
+
+    }
+    $("#searchbutton1").click(function() {
+        findBy($("#tag").val());
+     });
+
+
 });
+
 
 
 	// $.getJSON(
