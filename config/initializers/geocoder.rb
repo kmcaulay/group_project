@@ -18,4 +18,11 @@ Geocoder.configure(
   # Calculation options
   # units: :mi,                 # :km for kilometers or :mi for miles
   # distances: :linear          # :spherical or :linear
+
+# geocoding service
+  :lookup => :google,
+  # :ip_lookup => :google
+  :api_key => "AIzaSyDDhf202kxFAIgtBnMeHqJHgpjZzwPdUWA"
+  :timeout => 5,
+  :units => :km,
 )
