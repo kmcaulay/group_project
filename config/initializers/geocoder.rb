@@ -22,7 +22,8 @@ Geocoder.configure(
 # geocoding service
   :lookup => :google,
   # :ip_lookup => :google
-  :api_key => "AIzaSyDDhf202kxFAIgtBnMeHqJHgpjZzwPdUWA"
-  :timeout => 5,
-  :units => :km,
+  
+  :api_key => "AIzaSyDDhf202kxFAIgtBnMeHqJHgpjZzwPdUWA",
+  # :timeout => 5,
+  :units => :km
 )
