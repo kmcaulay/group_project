@@ -6,12 +6,12 @@ $(document).ready(function(){
             }
 
 
-    function searchByLocation(keyword,lat,lng) {
+    function searchByLocation(keyword) {
 
-        // var lat= 40.6234400;
-        // var lng= -74.1575500;
-        var lat= givenLat;
-        var lng= givenLng;
+        var lat= 40.708129980554766;
+        var lng= -74.006392967216;
+        // var lat= givenLat;
+        // var lng= givenLng;
 
             // This uri allows us to search by media, within a specified location.
             // https://www.instagram.com/developer/endpoints/media/
