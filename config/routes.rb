@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'recent_searches/index'
 
+  get 'recent_searches/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
