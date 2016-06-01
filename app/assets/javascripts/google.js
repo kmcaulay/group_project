@@ -4,6 +4,7 @@
 // 	function initMap() {
 // 	  var map = new google.maps.Map(document.getElementById('map'), {
 // 	    center: {lat: -34.397, lng: 150.644},
+<<<<<<< HEAD
 // 	    zoom: 6
 // 	  });
 // 	  var infoWindow = new google.maps.InfoWindow({map: map});
@@ -12,6 +13,16 @@
 // 	  if (navigator.geolocation) {
 // 	    navigator.geolocation.getCurrentPosition(function(position) {
 //       var pos = {
+=======
+// 	    zoom: 12
+// 	  });
+// 	  var infoWindow = new google.maps.InfoWindow({map: map});
+
+// // get location from user
+// 	  if (navigator.geolocation) {
+// 	    navigator.geolocation.getCurrentPosition(function(position) {
+//        pos = {
+>>>>>>> 4f26b1d289abd932c7598ad4701b827715348ade
 //         lat: position.coords.latitude,
 //         lng: position.coords.longitude
 //       };
