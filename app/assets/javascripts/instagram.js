@@ -15,7 +15,7 @@ $(document).ready(function(){
             
     function findBy(keyword) {
               // This uri allows us to search by keyword without location.
-               var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3291796759.1677ed0.ef402151e855498486ed25dd5f363337&callback=?&count=33&max_tag_id=AQCxFqFlbX7jvEO74uFZdZhF9Qcp6wpdMlZMpfdRSXFBJQAmciTXzh7UvVdEtwQ0z5XtbbgJFSnJD1kVK8Attw96nRHz4FwlwWQgJfxos4Mm8p_miBv9gtz658Q1R-0r9G4'
+               var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=33&max_tag_id=AQCxFqFlbX7jvEO74uFZdZhF9Qcp6wpdMlZMpfdRSXFBJQAmciTXzh7UvVdEtwQ0z5XtbbgJFSnJD1kVK8Attw96nRHz4FwlwWQgJfxos4Mm8p_miBv9gtz658Q1R-0r9G4'
                
         $.getJSON(uri, function(data) {
                 var parsed = data
@@ -32,7 +32,7 @@ $(document).ready(function(){
             // As we lop through, we're cross checking the tags against our given keyword
                     for(j=0; j<max; j++){
             // If the keyword matches a tag from the object
-                        if(parsed.data[k].tags[j].search("nyc")!=-1 == "newyorkcity"){
+                        if(parsed.data[k].tags[j].search("nyc") == "newyorkcity"){
                             // alert(parsed.data[i].tags[j]);
             // We set it as image, and then show the image.
                         var image = parsed.data[k].images.standard_resolution.url;
