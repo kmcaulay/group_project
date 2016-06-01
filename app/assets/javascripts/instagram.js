@@ -12,27 +12,11 @@ $(document).ready(function(){
         findBy($("#search").val());
      });
 
-<<<<<<< HEAD
             
     function findBy(keyword) {
               // This uri allows us to search by keyword without location.
-               var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=33&max_tag_id=AQCxFqFlbX7jvEO74uFZdZhF9Qcp6wpdMlZMpfdRSXFBJQAmciTXzh7UvVdEtwQ0z5XtbbgJFSnJD1kVK8Attw96nRHz4FwlwWQgJfxos4Mm8p_miBv9gtz658Q1R-0r9G4'
-               
-=======
-    function searchByLocation(keyword) {
+               var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=33&max_tag_id=AQCxFqFlbX7jvEO74uFZdZhF9Qcp6wpdMlZMpfdRSXFBJQAmciTXzh7UvVdEtwQ0z5XtbbgJFSnJD1kVK8Attw96nRHz4FwlwWQgJfxos4Mm8p_miBv9gtz658Q1R-0r9G4'           
 
-        var lat= 40.708129980554766;
-        var lng= -74.006392967216;
-        // var lat= givenLat;
-        // var lng= givenLng;
-
-            // This uri allows us to search by media, within a specified location.
-            // https://www.instagram.com/developer/endpoints/media/
-
-        var uri = 'https://api.instagram.com/v1/media/search?lat='+lat+'&lng='+lng+'&access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?'
-
-            // Use of jQuery here to parse through the Object
->>>>>>> 4f26b1d289abd932c7598ad4701b827715348ade
         $.getJSON(uri, function(data) {
                 var parsed = data
                 console.log(parsed);
