@@ -1,0 +1,5 @@
+<div id="myface"></div>
+<% @instagram.hashtags.each do |h| %>
+	<img src=<%= h.image %>>
+	<p><%= h.hashtags %></p>
+<% end %>

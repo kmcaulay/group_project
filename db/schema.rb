@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601225510) do
+ActiveRecord::Schema.define(version: 20160602132724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
   create_table "instagrams", force: :cascade do |t|
-    t.hstore   "location"
-    t.string   "tags",                    array: true
-    t.hstore   "pictures"
+    t.string   "image"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.string   "hashtags",                array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
