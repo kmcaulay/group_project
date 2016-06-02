@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%= favicon_link_tag 'favicon1.ico' %>
+
   <title>Roam</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <%= yield %>
-
+<br>
+<br>
+<div id="topcontainer">
+<input type="text" id="search" placeholder="#search"> </input> <button id="searchbutton" >Submit</button><br><br>
+</div>
+<div class="wrapper1">
+  <h1>#RoamNYC</h1>
+  <p>Why stand still when you can go #Roam.</p>
+  <!-- form -->
+  <div class="flexsearch">
+    <div class="flexsearch--wrapper">
+      <form class="flexsearch--form" action="#" method="post">
+        <div class="flexsearch--input-wrapper">
+        <input class="flexsearch--input" type="search" placeholder="search">
+        </div>
+        <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+      </form>
+    </div>
+  </div>
+    <!--  -->
+  <p>
+    #RoamNYC is an app that allows you to search for #hashtags in the NYC area.
+  </p>
+</div>
 		<!-- <style>
       html, body {
         height: 100%;
@@ -28,6 +54,6 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS975JByAfN5bLK1Gvfs8C2J9U1L-02DU&callback=initMap"
     async defer></script> -->
-
+  </div>
 </body>
 </html>
