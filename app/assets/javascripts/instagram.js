@@ -15,7 +15,7 @@ $(document).ready(function(){
             
     function findBy(keyword) {
               // This uri allows us to search by keyword without location.
-               var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=33&max_tag_id=AQCxFqFlbX7jvEO74uFZdZhF9Qcp6wpdMlZMpfdRSXFBJQAmciTXzh7UvVdEtwQ0z5XtbbgJFSnJD1kVK8Attw96nRHz4FwlwWQgJfxos4Mm8p_miBv9gtz658Q1R-0r9G4'           
+               var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3293728878.1677ed0.4b24d91df6db4f2e88bfaf25ab6c29af&callback=?&count=33&max_tag_id=AQCxFqFlbX7jvEO74uFZdZhF9Qcp6wpdMlZMpfdRSXFBJQAmciTXzh7UvVdEtwQ0z5XtbbgJFSnJD1kVK8Attw96nRHz4FwlwWQgJfxos4Mm8p_miBv9gtz658Q1R-0r9G4'           
 
         $.getJSON(uri, function(data) {
                 var parsed = data
