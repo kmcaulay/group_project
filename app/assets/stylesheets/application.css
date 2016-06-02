@@ -1,14 +1,16 @@
 
-body {
-	background-image: url("background_edit.jpg");
-	background-size: 100%;
+body{
+	background-image: url("roam_background_web.jpg");
+	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-color: #f07916;
-	font-family: Helvetica, sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	text-align: center;
 	margin-top: 150px;
 	color: white;
 }
+
 
 #searchbutton {
 	width: 100px;
@@ -52,4 +54,20 @@ body {
 	padding: 18px;
 	border-radius: 6px;
 }
+
+@media screen and (max-width: 430px) {
+		#topcontainer {
+	/*	background-image: url("roam_background_web.jpg");*/
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	/*	background-color: #f07916;*/
+		font-family: 'Oxygen', sans-serif;
+		text-align: center;
+		margin-top: -100px;
+		color: white;
+	}
+
+}
+
 
