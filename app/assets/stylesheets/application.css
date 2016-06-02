@@ -1,14 +1,16 @@
 
-body {
-	background-image: url("background_edit.jpg");
-	background-size: 100%;
+body{
+	background-image: url("roam_background_web.jpg");
+	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-color: #f07916;
-	font-family: Helvetica, sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	text-align: center;
 	margin-top: 150px;
 	color: white;
 }
+
 
 #searchbutton {
 	width: 100px;
@@ -53,18 +55,20 @@ body {
 	border-radius: 6px;
 }
 
-.border img {
-	width: 150px;
-	height: 150px;
-	margin-top: 5px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-bottom: 5px;
-	padding: 5px;
+
+@media screen and (max-width: 430px) {
+		#topcontainer {
+	/*	background-image: url("roam_background_web.jpg");*/
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	/*	background-color: #f07916;*/
+		font-family: 'Oxygen', sans-serif;
+		text-align: center;
+		margin-top: -100px;
+		color: white;
+	}
+
 }
 
-#map { 
-		height: 400px;
-		width: 50%;
- 	}
 
