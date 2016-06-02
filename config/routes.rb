@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :instagram
+
   get 'recent_searches/index'
 
   get 'recent_searches/new'

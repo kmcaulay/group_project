@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160601225510) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +27,35 @@ ActiveRecord::Schema.define(version: 20160601225510) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "grams", force: :cascade do |t|
+    t.string   "img"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instagrams", force: :cascade do |t|
+    t.string   "image"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.string   "hashtags",                array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.float    "longitude"
+    t.float    "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "recent_searches", force: :cascade do |t|
+    t.string   "hashtags"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
     t.string   "hashtags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
