@@ -16,7 +16,7 @@ $(document).ready(function(){
             // This uri allows us to search by media, within a specified location.
             // https://www.instagram.com/developer/endpoints/media/
 
-        var uri = 'https://api.instagram.com/v1/media/search?lat='+lat+'&lng='+lng+'&access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?'
+        // var uri = 'https://api.instagram.com/v1/media/search?lat='+lat+'&lng='+lng+'&access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?'
 
             // Use of jQuery here to parse through the Object
         $.getJSON(uri, function(data) {
@@ -32,7 +32,7 @@ $(document).ready(function(){
                 // imageFound = false;
              // We're setting the length of the number of tags within that object as max
                 max = parsed.data[i].tags.length;
-            // As we lop through, we're cross checking the tags against our given keyword
+            // As we loop through, we're cross checking the tags against our given keyword
                     for(j=0; j<max; j++){
             // If the keyword matches a tag from the object
                         if(parsed.data[i].tags[j] == keyword){
@@ -67,7 +67,7 @@ $(document).ready(function(){
             
     function findBy(keyword) {
               // This uri allows us to search by keyword without location.
-               var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=20'
+               // var uri = 'https://api.instagram.com/v1/tags/'+keyword+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=20'
                
             $.getJSON(uri, function(data) {
                         var parsed = data

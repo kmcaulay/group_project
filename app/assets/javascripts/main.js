@@ -5,7 +5,7 @@ $(document).ready(function(){
  
 
           var res=encodeURIComponent(keyword);
-           var uri = 'https://api.instagram.com/v1/tags/'+res+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=10'
+           // var uri = 'https://api.instagram.com/v1/tags/'+res+'/media/recent?access_token=3273809834.1677ed0.f58f670503ba42e28b80825f4b5dd3c6&callback=?&count=10'
             
     
 
@@ -20,12 +20,45 @@ $(document).ready(function(){
         );
 
         var make = function(x){
-            $('body').append("<img id='image' src='"+x+"'></img>")
+            // will attach the image to element that the pictures should show on before it atttached to the body  
+            $('.newsfeed').append("<img id='image' src='"+x+"'></img>")
         }
 
     }
+    $(".newsfeed").hide();
     $("#searchbutton").click(function() {
         searchBy($("#search").val());
+        $(".newsfeed").show();
+    });
+
+   
+        // how to get this to show up on the new div
+
+        //  $("#searchbutton").click(function() {
+        // searchBy($("#search").val());
+
+
+
+// wants this to lead to newsfeed 
+        // $("#searchbutton").click(function(){
+
+            // submit is a input class
+                // $(".newsfeed").show();
+                // newsfeed is a class that will show a new page that includes the newsfeed
+            // });
+            
+            // $(".img2"). on('click',function(){
+            //     img2 we maynot need anymore but when you click on the image maps will show 
+            // $(".newsfeed").hide();
+            //  });
+
+
+            // $(".img1").click(function(){
+            //     $(".map").show();
+            //  });
+
+
+  
      });
 
 	// $.getJSON(
@@ -50,5 +83,3 @@ $(document).ready(function(){
 	// 	console.log('hiihashdfasdf');
 	// 	$('body').append("<img id='image' src='"+x+"'></img>")
 	// }
-
-});

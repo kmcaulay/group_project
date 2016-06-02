@@ -1,3 +1,12 @@
 // Place all the styles related to the Recent_Searches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$default-orange: #f07916;
+@media only screen and  
+ (max-width: 667px) {
+	body {
+	background-color:$default-orange;
+	}
+}

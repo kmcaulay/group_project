@@ -1,0 +1,8 @@
+LOG:  database system was shut down at 2016-06-01 16:15:59 EDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  database "Roam_development" already exists
+STATEMENT:  CREATE DATABASE "Roam_development" ENCODING = 'unicode'
+ERROR:  database "Roam_test" already exists
+STATEMENT:  CREATE DATABASE "Roam_test" ENCODING = 'unicode'
