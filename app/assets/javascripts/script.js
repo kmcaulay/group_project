@@ -17,16 +17,21 @@
     $('#transbox').hide();
     $("#searchbutton").click(function() {
       $('#picturecontainer').empty();
+      findBy($("#search").val());
+      $('#transbox').show();
+    });
+
+    $("#search").keyup(function(e){
+      if(e.keyCode == 13){
+        $('#picturecontainer').empty();
         findBy($("#search").val());
         $('#transbox').show();
-      });
+      }
+    });
 
-      $("#search").keyup(function(e){
-        if (e.keyCode == 13) {
-          $('#picturecontainer').empty();
-          findBy($("#search").val());
-        }
-      });
+    $("#search").keyup(function(e){
+      console.log(e.keyCode);
+    })
 
 
     function findBy(keyword){ 
