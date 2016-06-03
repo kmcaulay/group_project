@@ -47,6 +47,16 @@ body{
 	color: #664A86;
 }
 
+/*index.html*/
+#heading {
+	width: 30%;
+}
+
+@import "compass/css3";
+
+
+/*new.html*/
+
 .newsfeed {
 	background-image: url('background_edit2.jpg');
 	background-size: 100%;
