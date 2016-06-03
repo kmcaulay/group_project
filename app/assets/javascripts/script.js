@@ -1,6 +1,6 @@
  $(document).ready(function(){ 
   
-    var imageFound = false;
+  var imageFound = false;
 
     var showImage = function(x){       
       $('#picturecontainer').append("<img id='imageshow' class='tooltip' src='assets/"+x+".jpg' width=300 height=300></img><br><br>");
