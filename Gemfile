@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'tooltipster-rails'
+
 gem 'rails_12factor'
 
 gem 'geocoder'

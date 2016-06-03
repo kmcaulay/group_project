@@ -4,7 +4,11 @@
 
        var showImage = function(x){       
 
-                   $('#picturecontainer').append("<div class='target'><img id='imageshow' class='target' src='assets/"+x+".jpg' width=300 height=300></img></div><br><br>");
+                   $('#picturecontainer').append("<img id='imageshow' class='tooltip' src='assets/"+x+".jpg' width=300 height=300></img><br><br>");
+            
+                      $('.tooltip').tooltipster({
+                        content: $("<span><img src='https://gigaom.com/wp-content/uploads/sites/1/2013/06/new-york-2013.png'/></span>")
+                      });
                }
 
        
@@ -42,40 +46,8 @@
 
       }
 
-  $('#target').tooltip({
-      items: 'img.target',
-      content: 'SHOW UP!!',
-      show: null, // show immediately
-      open: function(event, ui)
-      {
-          if (typeof(event.originalEvent) === 'undefined')
-          {
-              return false;
-          }
-          
-          var $id = $(ui.tooltip).attr('id');
-          
-          // close any lingering tooltips
-          $('div.ui-tooltip').not('#' + $id).remove();
-          
-          // ajax function to pull in data and add it to the tooltip goes here
-      },
-      close: function(event, ui)
-      {
-          ui.tooltip.hover(function()
-          {
-              $(this).stop(true).fadeTo(400, 1); 
-          },
-          function()
-          {
-              $(this).fadeOut('400', function()
-              {
-                  $(this).remove();
-              });
-          });
-      }
-  });
-
+ 
+ 
 
 
 
