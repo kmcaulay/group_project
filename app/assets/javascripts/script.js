@@ -2,19 +2,31 @@
   
     var imageFound = false;
 
-       var showImage = function(x){       
-
-                   $('#picturecontainer').append("<img id='imageshow' src='assets/"+x+".jpg' width=300 height=300></img><br><br>");
-               }
+      var showImage = function(x){       
+        $('#picturecontainer').append("<img id='imageshow' src='assets/"+x+".jpg' width=300 height=300></img><br><br>");
+      }
 
        
        var tags=["newyorkliberty","icecreamnyc"]
      
        $("#searchbutton").click(function() {
            $('#picturecontainer').empty();
-
            findBy($("#search").val());
         });
+
+        $("#search").keyup(function(e){
+          if (e.keyCode == 13) {
+            $('#picturecontainer').empty();
+
+            findBy($("#search").val());
+          }
+        });
+       
+
+
+        // $(document).keyup(function(e){
+        //   console.log(e.keyCode)
+        // })
 
 
       function findBy(keyword){
