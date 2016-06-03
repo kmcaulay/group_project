@@ -23,6 +23,13 @@
            $('#transbox').show();
         });
 
+       $("#search").keyup(function(e){
+          if (e.keyCode == 13) {
+            $('#picturecontainer').empty();
+            findBy($("#search").val());
+          }
+        });
+
 
       function findBy(keyword){
 
