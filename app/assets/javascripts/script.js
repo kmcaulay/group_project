@@ -20,8 +20,8 @@
         $("#search").keyup(function(e){
           if (e.keyCode == 13) {
             $('#picturecontainer').empty();
-
-            findBy($("#search").val());
+           findBy($("#search").val());
+           $('#transbox').show();
           }
         });
        
