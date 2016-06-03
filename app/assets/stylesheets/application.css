@@ -2,7 +2,7 @@
 #transbox {
   margin: 30px;
   margin: 30px auto;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(102, 74, 134, 0.5);
   border: 1px solid black;
   border-radius: 4px;
   width: 60%;
@@ -38,7 +38,9 @@ body{
 		1px 1px 5px rgba(0,0,0,.3);
 	cursor: pointer;
 	margin-top: 10px;
-
+	border: 1px solid black;
+  border-radius: 4px;
+  outline: none;
 
 }
 
@@ -61,6 +63,8 @@ body{
 	width: 70%;
 	padding: 18px;
 	border-radius: 6px;
+	border: 3px solid #664A86;
+	outline: none;
 } 
 
 .picturecontainer{
