@@ -4,10 +4,7 @@
 
       var showImage = function(x){       
 
-        $('#picturecontainer').append("<img class='imageshow' src='assets/"+x+".jpg' width=250 height=250></img>");
-        // $('.imageshow').css({
-          
-        // });
+        $('#picturecontainer').append("<img id='imageshow' src='assets/"+x+".jpg' width=300 height=300></img><br><br>");
 
       }
 
