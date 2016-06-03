@@ -1,8 +1,8 @@
  $(document).ready(function(){ 
   
-    var imageFound = false;
+  var imageFound = false;
 
-      var showImage = function(x){       
+  var showImage = function(x){       
 
 
  $('#picturecontainer').append("<img class='imageshow tooltip' src='assets/"+x+".jpg' width=250 height=250></img><br><br>");
@@ -19,35 +19,23 @@
        $("#searchbutton").click(function() {
            $('#picturecontainer').empty();
 
-           findBy($("#search").val());
-           $('#transbox').show();
-        });
 
+       findBy($("#search").val());
+       $('#transbox').show();
+    });
 
-      function findBy(keyword){
-
-       //alert(keyword);
-         
-       var index=0;
+  function findBy(keyword){ 
+    var index=0;
                    
-                   while( index<tags.length ){
+     while( index<tags.length ){          
+        if( keyword.search(tags[index] )> -1){
+          showImage(tags[index]);
 
-                         
-                      if( keyword.search(tags[index] )> -1){
+     // If keyword matches the tag, the imageFound var is set to true
+          imageFound = true;     
+        }
+          index++;
+    }        
 
-                        
-                           showImage(tags[index]);
-
-
-               // If keyword matches the tag, the imageFound var is set to true
-                               imageFound = true;     
-                         }
-
-                   index++;
-
-                       }        
-
-      }
-
-
+  }    
 });
