@@ -11,7 +11,7 @@
       }
 
        
-       var tags=["newyorkliberty","icecreamnyc"]
+       var tags=["newyorkliberty","icecreamnyc","timsquare","babypizza","donuts","italy","yankees","sub","taxi","Centralpark","bridge","brooklyn","rock"]
        $('#transbox').hide();
        $("#searchbutton").click(function() {
            $('#picturecontainer').empty();
