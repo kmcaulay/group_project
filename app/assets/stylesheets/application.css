@@ -1,5 +1,18 @@
 /**= require tooltipster*/
 
+#transbox {
+  margin: 30px;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 60%;
+  /*opacity: 0.6;*/
+  /*filter: alpha(opacity=60); /* For IE8 and earlier */*/
+  box-shadow: 0px 0px 2px rgba(0,0,0,.5),
+		1px 1px 5px rgba(0,0,0,.3);
+}
+
 body{
 	background-image: url("roam_background_web.jpg");
 	background-size: cover;
@@ -36,10 +49,15 @@ body{
 }
 
 /*index.html*/
+#heading {
+	width: 30%;
+}
+
 @import "compass/css3";
 
 
 /*new.html*/
+
 .newsfeed {
 	background-image: url('background_edit2.jpg');
 	background-size: 100%;
@@ -54,6 +72,25 @@ body{
 	width: 70%;
 	padding: 18px;
 	border-radius: 6px;
+} 
+
+.picturecontainer{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.imageshow {
+	margin-bottom: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+	display: inline-block;
+	border-color: #2B2B2B;
+	border-radius: 7px;
+  border-weight: 3px; 
+  border-style: solid;
+  margin-top: 30px;
 }
 
 
@@ -70,6 +107,19 @@ body{
 		color: white;
 	}
 
+	#searchbutton {
+	width: 160px;
+	-webkit-transition: all .5s;
+	background: #664A86;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+	color: #F5F6EE;
+	border-radius: 3px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,.5),
+		1px 1px 5px rgba(0,0,0,.3);
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 20px;
+
 }
-
-
