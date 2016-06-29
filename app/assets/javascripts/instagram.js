@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var imageFound = false;
     var showImage = function(x){       
-                $('#picturecontainer').append("<img id='imageshow' src='"+x+"'></img><br>");
+                $('#picturecontainer').append("<img id='imageshow' src='<%= asset_path("+x+")%>'></img><br>");
             }
 
   
