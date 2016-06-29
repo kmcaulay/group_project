@@ -3,8 +3,8 @@
   var imageFound = false;
 
     var showImage = function(x){       
-      $('#picturecontainer').append("<img class='imageshow tooltip' src='assets/"+x+".jpg' width=300 height=300></img><br><br>");
-                
+      $('#picturecontainer').append("<img class='imageshow tooltip' src='<%= asset_path("+x+".jpg) %>' width=300 height=300></img><br><br>");
+
       $('.tooltip').tooltipster({
         content: $("<span><img src='https://gigaom.com/wp-content/uploads/sites/1/2013/06/new-york-2013.png'/></span>")
       });
